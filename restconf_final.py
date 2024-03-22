@@ -69,7 +69,7 @@ def enable():
     yangConfig = {
         "ietf-interfaces:interface": {
             "name": "Loopback64070184",
-            "enabled": True
+            "enabled": "true"
         }
     }
 
@@ -93,7 +93,7 @@ def disable():
     yangConfig = {
         "ietf-interfaces:interface": {
             "name": "Loopback64070184",
-            "enabled": False
+            "enabled": "false"
         }
     }
 
@@ -127,7 +127,7 @@ def status():
         print("STATUS OK: {}".format(resp.status_code))
         response_json = resp.json()
         admin_status = 'up' if response_json['ietf-interfaces:interface']['enabled'] == True else 'down'
-        oper_status = 'up' if response_json['ietf-interfaces:interface']['ietf-ip:ipv4']['address'][0]['ip'] != '' else 'down'
+        oper_status = 'up' if response_json['ietf-interfaces:interface']['ietf-ip:ipv4']['address'][0]['ip'] != '' and response_json['ietf-interfaces:interface']['enabled'] == True else 'down'
         print(admin_status)
         print(oper_status)
         if admin_status == 'up' and oper_status == 'up':
@@ -139,8 +139,14 @@ def status():
         return "No Interface loopback 64070184"
     else:
         print('Error. Status Code: {}'.format(resp.status_code))
-        
-# test
+
+# test the functions
 # print(create())
+# print(disable())
+# print(disable())
+# print(enable())
+# print(enable())
+# print(status())
+# print(disable())
 # print(status())
 # print(delete())

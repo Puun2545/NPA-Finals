@@ -140,3 +140,15 @@ def status():
             return "No Interface loopback 64070184"
     except:
        print("Error!")
+
+
+# test the functions
+# print(create())
+# print(disable())
+# print(disable())
+# print(enable())
+# print(enable())
+# print(status())
+# print(disable())
+# print(status())
+# print(delete())
