@@ -72,7 +72,7 @@ while True:
     if message.find("/64070184") == 0:
         space = message.find(" ")
         # extract the command
-        command = message[space + 1 :]
+        command = message[space + 1 :].lower()
         print(command)
 
 # 5. Complete the logic for each command
