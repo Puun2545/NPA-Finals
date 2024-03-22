@@ -9,7 +9,8 @@
 import requests
 import json
 import time
-from restconf_final import create, delete, enable, disable, status
+from restconf_final import create, delete, status
+from netconf_final import enable, disable
 
 
 #######################################################################################
