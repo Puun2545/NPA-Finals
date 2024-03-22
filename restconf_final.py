@@ -139,7 +139,8 @@ def status():
         return "No Interface loopback 64070184"
     else:
         print('Error. Status Code: {}'.format(resp.status_code))
-create()
-status()
-print(status())
-delete()
+        
+# test
+# print(create())
+# print(status())
+# print(delete())
