@@ -1,4 +1,6 @@
 # NPA2023-Final
+Name : Puun Vachangngern
+StuID : 64070184
 
 ## Instruction
 
